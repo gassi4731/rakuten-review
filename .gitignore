@@ -60,3 +60,6 @@ build-iPhoneSimulator/
 
 # Output file
 *.csv
+
+# log
+selenium.log
