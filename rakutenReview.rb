@@ -21,7 +21,7 @@ class RakutenReviewManager
   def getAllReviews
     reviews = []
     i = 1
-    while true do
+    while i <= 100 do
       onePageReviews = getReviews(i.to_s + '.1')
       if onePageReviews.length != 0
         reviews = reviews + onePageReviews
@@ -43,7 +43,7 @@ class RakutenReviewManager
       description = element.find_element(:class, 'description').text.gsub(/\n/, ' ')
       reviews.push([star, description])
     end
-    p 'get: ' + @review_url + '/' + page_id + '/'
+    puts 'get: ' + @review_url + '/' + page_id + '/'
     return reviews
   end
 end
